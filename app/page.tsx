@@ -38,7 +38,7 @@ const formatTime = (iso: string | null) =>
       }).format(new Date(iso))
     : 'Pending';
 
-// Validates 11-digit AWB numbers (Air Freight) it could be change
+// Validates 11-digit AWB numbers (Air Freight)
 const normalizeAwb = (raw: string) => {
   const digits = raw.replace(/\D/g, '');
   return digits.length === 11 ? `${digits.slice(0, 3)}-${digits.slice(3)}` : null;
